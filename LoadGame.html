@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read TXT</title>
+    
+</head>
+<body>
+	<input type="file" id="openFile" />
+	<br>
+	<textarea id="fileContents"></textarea>
+	    <script type="text/javascript">
+	    	document.getElementById("openFile").addEventListener('change', function() {
+		var fr = new FileReader();
+		var testme = "This is a test"
+		fr.onload = function() {
+		document.getElementById("fileContents").textContent = this.result;
+				var testme = this.result;
+		localStorage.setItem('username', JSON.stringify(testme));
+		}
+		fr.readAsText(this.files[0]);		
+})
+	    	</script>
+		<br>	<br>
+		
+<a href="./SudokuHTML.htm"><button style="color:green;border-radius;10px;">Play Sudoku</button></a>
+
+	<br>	<br>
+
+<style>
+body {
+    background-color: lightgreen;
+}
+</style>
+
