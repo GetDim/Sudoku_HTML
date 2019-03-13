@@ -1,1 +1,1 @@
-NextGame.exe replaces exisiting Game191.txt with the new game numbers
+NextGame.exe generates next Game##.txt with new game numbers
